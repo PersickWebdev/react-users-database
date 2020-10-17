@@ -9,9 +9,9 @@ const WithRouterHeader = (props) => {
         .join(' ');
 
     return (
-        <div className='header__container'>
-            {path}
-        </div>
+        <header className='header__container'>
+            <h1>{path}</h1>
+        </header>
     );
 }
 

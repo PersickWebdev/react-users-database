@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
     return (
         <div className='sidebar__container'>
-            <div>
-                <NavLink to='/users-list'>Users List</NavLink>
+            <div className='sidebar__linkBox'>
+                <NavLink to='/users-list' activeClassName='activeLink'>Users List</NavLink>
             </div>
-            <div>
-                <NavLink to='/users-editor'>Users Editor</NavLink>
+            <div className='sidebar__linkBox'>
+                <NavLink to='/users-editor' activeClassName='activeLink'>Users Editor</NavLink>
             </div>
-            <div>
-                <NavLink to='/users-add-form'>Users Add Form</NavLink>
+            <div className='sidebar__linkBox'>
+                <NavLink to='/users-add-form' activeClassName='activeLink'>Users Add Form</NavLink>
             </div>
         </div>
     );
