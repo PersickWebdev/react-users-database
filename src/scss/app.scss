@@ -1,0 +1,25 @@
+@import 'reset';
+@import 'variables';
+
+@import './components/header';
+@import './components/sidebar';
+@import './components/footer';
+@import './components/usersList';
+@import './components/usersEditor';
+@import './components/usersAddForm';
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: $color-grey;
+}
+
+.app__container {
+  display: grid;
+  grid-template-rows: 50px 2fr 100px;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 'h h' 's c' 'f f';
+}
+
+.app__content {
+  grid-area: c;
+}
