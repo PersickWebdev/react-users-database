@@ -4,9 +4,6 @@ import { Route } from 'react-router-dom';
 import { Header } from './components';
 import { Sidebar } from './components';
 import { UsersList } from "./components";
-import { UsersEditor } from "./components";
-import { UsersAddForm } from "./components";
-import { Footer } from './components';
 
 const App = () => {
     return (
@@ -14,9 +11,7 @@ const App = () => {
             <Header/>
             <Sidebar/>
             <div className='app__content'>
-                <Route path='/users-list'     component={ UsersList } />
-                <Route path='/users-editor'   component={ UsersEditor } />
-                <Route path='/users-add-form' component={ UsersAddForm } />
+                <Route path='/users-list' component={ UsersList } />
             </div>
         </div>
     );

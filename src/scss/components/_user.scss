@@ -5,8 +5,29 @@
   flex-direction: column;
   padding: 10px;
   border: 1px solid $color-black;
+  border-top: 5px solid $color-main;
   border-radius: 5px;
-  background-color: rgba(204, 204, 204, 0.5);
+  background-color: rgba(114, 114, 114, 0.5);
+  box-shadow: 2px 2px 10px $color-black;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover .user__name {
+    color: $color-main;
+    transform: translateX(15%);
+  }
+
+  &:hover .user__age span {
+    color: $color-main;
+  }
+
+  &:hover .user__info span {
+    color: $color-main;
+    transform: translateX(-20px);
+  }
 
   .user__nameAge {
     width: 100%;
@@ -18,18 +39,26 @@
     .user__name {
       flex: 2;
       font-size: 20px;
+      transition: all 0.5s ease-out;
     }
 
     .user__age {
       flex: 1;
       margin: 10px;
       text-align: right;
+
+      & span {
+        transition: all 0.5s ease;
+      }
     }
   }
 
   .user__info {
     margin-top: 10px;
+    & span {
+      transition: all 0.5s ease;
 
+    }
     & p {
       display: flex;
       justify-content: space-between;
@@ -49,11 +78,11 @@
       border-radius: 3px;
       outline: none;
       padding: 5px;
-      background-color: $color-headings;
+      background-color: $color-main;
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: $color-active;
+        background-color: $color-main;
       }
     }
 

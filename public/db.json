@@ -6,9 +6,9 @@
       "secondName": "Anderson",
       "age": 30,
       "location": "England",
-      "maritalStatus": "single",
+      "maritalStatus": "Single",
       "children": "none",
-      "occupation": "dentist"
+      "occupation": "Dentist"
     },
     {
       "id": 2,
@@ -16,9 +16,9 @@
       "secondName": "Harris",
       "age": 25,
       "location": "New-York",
-      "maritalStatus": "married",
+      "maritalStatus": "Married",
       "children": "1",
-      "occupation": "developer"
+      "occupation": "Developer"
     },
     {
       "id": 3,
@@ -26,9 +26,9 @@
       "secondName": "Markova",
       "age": 18,
       "location": "Odessa",
-      "maritalStatus": "single",
+      "maritalStatus": "Single",
       "children": "none",
-      "occupation": "student"
+      "occupation": "Student"
     },
     {
       "id": 4,
@@ -36,9 +36,9 @@
       "secondName": "Scott",
       "age": 26,
       "location": "Wales",
-      "maritalStatus": "single",
+      "maritalStatus": "Single",
       "children": "1",
-      "occupation": "doctor"
+      "occupation": "Doctor"
     },
     {
       "id": 5,
@@ -46,9 +46,9 @@
       "secondName": "Murray",
       "age": 28,
       "location": "Bronx",
-      "maritalStatus": "single",
+      "maritalStatus": "Married",
       "children": "2",
-      "occupation": "trader"
+      "occupation": "Trader"
     },
     {
       "id": 6,
@@ -56,9 +56,9 @@
       "secondName": "Davidson",
       "age": 16,
       "location": "Miami",
-      "maritalStatus": "single",
+      "maritalStatus": "Single",
       "children": "none",
-      "occupation": "school-girl"
+      "occupation": "School-girl"
     }
   ]
 }

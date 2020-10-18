@@ -1,12 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from 'prop-types';
 
 const User = ({ id, firstName, secondName, age, location, occupation, maritalStatus, children, deleteHandler }) => {
+    const [isEdit, setIsEdit] = useState(false);
+
+    const toggleEditMode = () => {
+        setIsEdit(!isEdit);
+    }
+
     return (
         <div className='user__container'>
             <div className='user__nameAge'>
                 <h3 className='user__name'>{firstName} {secondName}</h3>
-                <p className='user__age'>Age: {age}</p>
+                <p className='user__age'>Age: <span>{age}</span></p>
             </div>
             <div className='user__info'>
                 <p className='user__location'> Location: <span>{location}</span></p>
@@ -15,7 +21,7 @@ const User = ({ id, firstName, secondName, age, location, occupation, maritalSta
                 <p className='user__children'> Children: <span>{children}</span></p>
             </div>
             <div className='user__actions'>
-                <button className='user__button'>Edit</button>
+                <button className='user__button' onClick={toggleEditMode}>Edit</button>
                 <button className='user__button user__button--delete'
                         onClick={() => deleteHandler(id)}>Delete</button>
             </div>

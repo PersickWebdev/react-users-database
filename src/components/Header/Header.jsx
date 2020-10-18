@@ -2,11 +2,16 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const WithRouterHeader = (props) => {
-    let path = props.location.pathname
-        .slice(1)
-        .split('-')
-        .map(word => word[0].toUpperCase() + word.split('').slice(1).join(''))
-        .join(' ');
+    let path;
+    if (props.location.pathname === '/') {
+        path = 'Users Database'
+    } else {
+        path = props.location.pathname
+            .slice(1)
+            .split('-')
+            .map(word => word[0].toUpperCase() + word.split('').slice(1).join(''))
+            .join(' ');
+    }
 
     return (
         <header className='header__container'>

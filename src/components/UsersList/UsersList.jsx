@@ -15,6 +15,7 @@ const UsersList = () => {
     const deleteHandler = (id) => {
         dispatch(deleteUser(id))
     }
+
     const usersElements = users.map(user => <User key={user.id}
                                                   {...user}
                                                   deleteHandler={deleteHandler}/>);

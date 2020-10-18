@@ -1,11 +1,8 @@
 @import 'reset';
 @import 'variables';
-
 @import './components/header';
 @import './components/sidebar';
 @import './components/usersList';
-@import './components/usersEditor';
-@import './components/usersAddForm';
 @import './components/user';
 
 body {
