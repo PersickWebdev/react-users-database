@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const WithRouterHeader = (props) => {
-    const path = props.location.pathname
+    let path = props.location.pathname
         .slice(1)
         .split('-')
         .map(word => word[0].toUpperCase() + word.split('').slice(1).join(''))

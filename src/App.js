@@ -14,11 +14,10 @@ const App = () => {
             <Header/>
             <Sidebar/>
             <div className='app__content'>
-                <Route path='/users-list'     component={ UsersList } exact/>
-                <Route path='/users-editor'   component={ UsersEditor } exact/>
-                <Route path='/users-add-form' component={ UsersAddForm } exact/>
+                <Route path='/users-list'     component={ UsersList } />
+                <Route path='/users-editor'   component={ UsersEditor } />
+                <Route path='/users-add-form' component={ UsersAddForm } />
             </div>
-            <Footer/>
         </div>
     );
 }

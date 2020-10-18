@@ -1,0 +1,69 @@
+.user__container {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 2% 2% 0;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  background-color: rgba(204, 204, 204, 0.5);
+
+  .user__nameAge {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-black;
+
+    .user__name {
+      flex: 2;
+      font-size: 20px;
+    }
+
+    .user__age {
+      flex: 1;
+      margin: 10px;
+      text-align: right;
+    }
+  }
+
+  .user__info {
+    margin-top: 10px;
+
+    & p {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+  }
+
+  .user__actions {
+    margin-top: 10px;
+    text-align: right;
+    border-top: 1px solid $color-black;
+    padding-top: 7px;
+
+    .user__button {
+      margin-left: 10px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      padding: 5px;
+      background-color: $color-headings;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $color-active;
+      }
+    }
+
+    .user__button--delete {
+      background-color: $color-delete;
+
+      &:hover {
+        background-color: $color-delete-active;
+      }
+    }
+  }
+
+}

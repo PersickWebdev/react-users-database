@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Markus",
+      "secondName": "Anderson",
+      "age": 30,
+      "location": "England",
+      "maritalStatus": "single",
+      "children": "none",
+      "occupation": "dentist"
+    },
+    {
+      "id": 2,
+      "firstName": "Bill",
+      "secondName": "Harris",
+      "age": 25,
+      "location": "New-York",
+      "maritalStatus": "married",
+      "children": "1",
+      "occupation": "developer"
+    },
+    {
+      "id": 3,
+      "firstName": "Kate",
+      "secondName": "Markova",
+      "age": 18,
+      "location": "Odessa",
+      "maritalStatus": "single",
+      "children": "none",
+      "occupation": "student"
+    },
+    {
+      "id": 4,
+      "firstName": "Jane",
+      "secondName": "Scott",
+      "age": 26,
+      "location": "Wales",
+      "maritalStatus": "single",
+      "children": "1",
+      "occupation": "doctor"
+    },
+    {
+      "id": 5,
+      "firstName": "Phil",
+      "secondName": "Murray",
+      "age": 28,
+      "location": "Bronx",
+      "maritalStatus": "single",
+      "children": "2",
+      "occupation": "trader"
+    },
+    {
+      "id": 6,
+      "firstName": "Marry",
+      "secondName": "Davidson",
+      "age": 16,
+      "location": "Miami",
+      "maritalStatus": "single",
+      "children": "none",
+      "occupation": "school-girl"
+    }
+  ]
+}

@@ -3,10 +3,10 @@
 
 @import './components/header';
 @import './components/sidebar';
-@import './components/footer';
 @import './components/usersList';
 @import './components/usersEditor';
 @import './components/usersAddForm';
+@import './components/user';
 
 body {
   font-family: Roboto, sans-serif;
@@ -21,6 +21,5 @@ body {
 }
 
 .app__content {
-  height: 80vh;
   grid-area: c;
 }
