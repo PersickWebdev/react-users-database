@@ -8,7 +8,10 @@
       "location": "England",
       "maritalStatus": "Single",
       "children": "none",
-      "occupation": "Dentist"
+      "occupation": "Dentist",
+      "interests": [
+        "Painting", "Watching Musicals", "Skating"
+      ]
     },
     {
       "id": 2,
@@ -18,7 +21,10 @@
       "location": "New-York",
       "maritalStatus": "Married",
       "children": "1",
-      "occupation": "Developer"
+      "occupation": "Developer",
+      "interests": [
+        "Extreme driving", "Animals", "Music"
+      ]
     },
     {
       "id": 3,
@@ -28,7 +34,10 @@
       "location": "Odessa",
       "maritalStatus": "Single",
       "children": "none",
-      "occupation": "Student"
+      "occupation": "Student",
+      "interests": [
+        "Swimming", "Metalcore", "Chat shows"
+      ]
     },
     {
       "id": 4,
@@ -38,7 +47,10 @@
       "location": "Wales",
       "maritalStatus": "Single",
       "children": "1",
-      "occupation": "Doctor"
+      "occupation": "Doctor",
+      "interests": [
+        "Rope jumping", "Hiking", "Photography"
+      ]
     },
     {
       "id": 5,
@@ -48,7 +60,10 @@
       "location": "Bronx",
       "maritalStatus": "Married",
       "children": "2",
-      "occupation": "Trader"
+      "occupation": "Trader",
+      "interests": [
+        "Snowboarding", "Video", "Scripts"
+      ]
     },
     {
       "id": 6,
@@ -58,7 +73,10 @@
       "location": "Miami",
       "maritalStatus": "Single",
       "children": "none",
-      "occupation": "School-girl"
+      "occupation": "School-girl",
+      "interests": [
+        "Watching Cartoons", "Plants", "Physics"
+      ]
     }
   ]
 }

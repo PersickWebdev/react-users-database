@@ -6,7 +6,7 @@ import { User } from "../index";
 
 const UsersList = () => {
     const dispatch = useDispatch();
-    const users = useSelector(({users}) => users.users)
+    const users = useSelector(({users}) => users.users);
 
     useEffect(() => {
         dispatch(fetchUsers());
