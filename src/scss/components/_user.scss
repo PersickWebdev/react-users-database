@@ -120,15 +120,15 @@
     transition: all 0.5s ease;
     z-index: 10;
 
-    .user__interests {
+    & p:not(:first-child) {
       margin-top: 5px;
       padding-top: 5px;
       border-top: 1px solid $color-black;
+    }
 
-      & span {
-        color: $color-main;
-        font-weight: 600;
-      }
+    .user__more--field span {
+      color: $color-main;
+      font-weight: 600;
     }
 
     .user__button--close {
@@ -137,4 +137,9 @@
       background-color: $color-delete;
     }
   }
+
+  .user__more--actions {
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-end;}
 }

@@ -2,13 +2,18 @@ import React, {useState} from "react";
 import PropTypes from 'prop-types';
 
 const User = ({ id, firstName, secondName, age, location, occupation,
-                maritalStatus, children, interests, deleteHandler }) => {
+                maritalStatus, children, interests, qualities, goals,
+                deleteHandler }) => {
 
     const [isVisible, setIsVisible] = useState(false);
 
     const showMore = () => {
         setIsVisible(!isVisible);
     };
+
+    const processArray = (array) => {
+        return array.map((item, index) => index + 1 === array.length ? `${item}.` : `${item}, `)
+    }
 
     return (
         <div className='user__container'>
@@ -32,11 +37,19 @@ const User = ({ id, firstName, secondName, age, location, occupation,
             </div>
             {isVisible &&
             <div className='user__more'>
-                <button className='user__button user__button--close'
-                        onClick={showMore}>&times;</button>
-                <p className='user__interests'><span>Interests:</span> <br/>
-                    {interests.map((item, index) => index + 1 === interests.length ? `${item}.` : `${item}, `)}
+                <p className='user__interests user__more--field'><span>Interests:</span> <br/>
+                    {processArray(interests)}
                 </p>
+                <p className='user__qualities user__more--field'><span>Qualities:</span> <br/>
+                    {processArray(qualities)}
+                </p>
+                <p className='user__goals user__more--field'><span>Goals:</span> <br/>
+                    {processArray(goals)}
+                </p>
+                <div className='user__more--actions'>
+                    <button className='user__button user__button--close'
+                            onClick={showMore}>&times;</button>
+                </div>
             </div>
             }
         </div>

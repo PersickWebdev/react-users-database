@@ -10,7 +10,13 @@
       "children": "none",
       "occupation": "Dentist",
       "interests": [
-        "Painting", "Watching Musicals", "Skating"
+        "painting", "watching musicals", "skating"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "personal growth", "high income"
       ]
     },
     {
@@ -23,7 +29,13 @@
       "children": "1",
       "occupation": "Developer",
       "interests": [
-        "Extreme driving", "Animals", "Music"
+        "extreme driving", "animals", "music"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "own company", "travelling"
       ]
     },
     {
@@ -36,7 +48,13 @@
       "children": "none",
       "occupation": "Student",
       "interests": [
-        "Swimming", "Metalcore", "Chat shows"
+        "swimming", "metalcore", "chat shows"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "own small house", "gardening"
       ]
     },
     {
@@ -49,7 +67,13 @@
       "children": "1",
       "occupation": "Doctor",
       "interests": [
-        "Rope jumping", "Hiking", "Photography"
+        "rope jumping", "hiking", "photography"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "become a pro photograph", "family"
       ]
     },
     {
@@ -62,7 +86,13 @@
       "children": "2",
       "occupation": "Trader",
       "interests": [
-        "Snowboarding", "Video", "Scripts"
+        "snowboarding", "video", "scripts"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "open market", "high income", "happy family"
       ]
     },
     {
@@ -75,7 +105,13 @@
       "children": "none",
       "occupation": "School-girl",
       "interests": [
-        "Watching Cartoons", "Plants", "Physics"
+        "watching cartoons", "plants", "physics"
+      ],
+      "qualities": [
+        "responsibility", "hardworking", "self-development"
+      ],
+      "goals": [
+        "study as biologist", "a good car"
       ]
     }
   ]
