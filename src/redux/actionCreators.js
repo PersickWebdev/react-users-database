@@ -17,7 +17,19 @@ export const postNewUser = (newUser) => (dispatch) => {
                console.log('Error occurred');
            }
         });
-}
+};
+
+export const deleteUserFromDataBase = (userId) => (dispatch) => {
+    axios.delete(`http://localhost:3001/users/${userId}/`)
+        .then((response) => {
+            if (response.status === 200) {
+                dispatch(deleteUser(userId));
+                dispatch(setUsers(response.data));
+            } else {
+                console.log('Error occurred');
+            }
+        });
+};
 
 export const setUsers = (users) => {
     return {
@@ -31,4 +43,4 @@ export const deleteUser = (userId) => {
         type: DELETE_USER,
         payload: userId
     }
-}
+};

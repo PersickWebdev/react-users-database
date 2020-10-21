@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { deleteUser, fetchUsers } from "../../redux/actionCreators";
+import { deleteUserFromDataBase, fetchUsers} from "../../redux/actionCreators";
 import { useDispatch, useSelector } from "react-redux";
 
 import { User } from "../index";
@@ -13,7 +13,8 @@ const UsersList = () => {
     }, []);
 
     const deleteHandler = (id) => {
-        dispatch(deleteUser(id))
+        if (window.confirm('Are you sure you want to delete this User?'))
+        dispatch(deleteUserFromDataBase(id))
     }
 
     const usersElements = users.map(user => <User key={user.id}

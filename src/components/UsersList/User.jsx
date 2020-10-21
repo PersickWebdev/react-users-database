@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const User = ({ id, firstName, secondName, age, location, occupation,
                 maritalStatus, children, interests, qualities, goals,
                 deleteHandler }) => {
-    console.log(age);
     const [isVisible, setIsVisible] = useState(false);
 
     const showMore = () => {

@@ -144,30 +144,6 @@
         "study as biologist",
         "a good car"
       ]
-    },
-    {
-      "id": 1603287470260,
-      "firstName": "Zoe",
-      "secondName": "Mitchel",
-      "age": 23,
-      "location": "Ohio",
-      "maritalStatus": "Single",
-      "children": "none",
-      "occupation": "Nurse",
-      "interests": [
-        "Nursery",
-        "apple-juice",
-        "mountain hiking"
-      ],
-      "qualities": [
-        "Outgoing",
-        "very kind"
-      ],
-      "goals": [
-        "Having family",
-        "a good motobike",
-        "high income"
-      ]
     }
   ]
 }
