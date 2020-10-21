@@ -7,6 +7,9 @@ const Sidebar = () => {
             <div className='sidebar__linkBox'>
                 <NavLink to='/users-list' activeClassName='activeLink'>Users List</NavLink>
             </div>
+            <div className='sidebar__linkBox'>
+                <NavLink to='/user-add-form' activeClassName='activeLink'>Add New User</NavLink>
+            </div>
         </div>
     );
 }
