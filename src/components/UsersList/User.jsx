@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const User = ({ id, firstName, secondName, age, location, occupation,
                 maritalStatus, children, interests, qualities, goals,
                 deleteHandler }) => {
-
+    console.log(age);
     const [isVisible, setIsVisible] = useState(false);
 
     const showMore = () => {
@@ -63,7 +63,10 @@ User.propTypes = {
     location: PropTypes.string,
     occupation: PropTypes.string,
     maritalStatus: PropTypes.string,
-    children: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    children: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    interests: PropTypes.arrayOf(PropTypes.string),
+    qualities: PropTypes.arrayOf(PropTypes.string),
+    goals: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default User;

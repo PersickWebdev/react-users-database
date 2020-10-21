@@ -8,6 +8,17 @@ export const fetchUsers = () => (dispatch) => {
         });
 };
 
+export const postNewUser = (newUser) => (dispatch) => {
+    axios.post('http://localhost:3001/users', newUser)
+        .then((response) => {
+           if (response.status === 200) {
+               dispatch(setUsers(response.data));
+           } else {
+               console.log('Error occurred');
+           }
+        });
+}
+
 export const setUsers = (users) => {
     return {
         type: SET_USERS,

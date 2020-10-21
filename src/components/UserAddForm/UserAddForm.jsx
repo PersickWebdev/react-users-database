@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {postNewUser} from "../../redux/actionCreators";
 
 const UserAddForm = () => {
+    const dispatch = useDispatch();
     const [value, setValue] = useState({
         userName: '',
         userSurname: '',
@@ -8,7 +11,10 @@ const UserAddForm = () => {
         userLocation: '',
         userOccupation: '',
         userMaritalStatus: '',
-        userChildren: ''
+        userChildren: '',
+        userInterests: [],
+        userQualities: [],
+        userGoals: []
     });
 
     const handler = (event) => {
@@ -18,6 +24,15 @@ const UserAddForm = () => {
         });
     };
 
+    const arrayHandler = (event) => {
+        const array = event.target.value.split(',').map(item => item[0] === ' ' ? item.split('').slice(1).join('') : item);
+        setValue({
+            ...value,
+            [event.target.name]: array
+        });
+    };
+
+    // The following code optimization needed (32 - 48)
     const handleUserName = (event) => {
         handler(event);
     };
@@ -44,6 +59,30 @@ const UserAddForm = () => {
 
     const handleUserChildren = (event) => {
         handler(event);
+    };
+
+    const handleUserInterests = (event) => {
+        handler(event);
+    };
+
+    const handleUserQualities = (event) => {
+        handler(event);
+    }
+
+    const handleUserGoals = (event) => {
+        handler(event);
+    }
+
+    const setUserInterests = (event) => {
+        arrayHandler(event);
+    };
+
+    const setUserQualities = (event) => {
+        arrayHandler(event);
+    }
+
+    const setUserGoals = (event) => {
+        arrayHandler(event);
     }
 
     const handleFormSubmit = (event) => {
@@ -52,15 +91,17 @@ const UserAddForm = () => {
             id: Date.now(),
             firstName: value.userName,
             secondName: value.userSurname,
-            age: value.userAge,
+            age: Number(value.userAge),
             location: value.userLocation,
             maritalStatus: value.userMaritalStatus,
             children: value.userChildren,
             occupation: value.userOccupation,
+            interests: value.userInterests,
+            qualities: value.userQualities,
+            goals: value.userGoals
         };
-        console.log(newUser);
+        dispatch(postNewUser(newUser));
     };
-
 
     return (
         <form className='form'>
@@ -119,6 +160,33 @@ const UserAddForm = () => {
                        type='text'
                        name='userChildren'
                        placeholder='Enter user children quantity ...'/>
+            </div>
+            <div className='form__section'>
+                <p className='form__label'>User interests:</p>
+                <input onChange={handleUserInterests}
+                       onBlur={setUserInterests}
+                       value={value.userInterests}
+                       type='text'
+                       name='userInterests'
+                       placeholder='Enter user interests ...'/>
+            </div>
+            <div className='form__section'>
+                <p className='form__label'>User qualities:</p>
+                <input onChange={handleUserQualities}
+                       onBlur={setUserQualities}
+                       value={value.userQualities}
+                       type='text'
+                       name='userQualities'
+                       placeholder='Enter user interests ...'/>
+            </div>
+            <div className='form__section'>
+                <p className='form__label'>User goals:</p>
+                <input onChange={handleUserGoals}
+                       onBlur={setUserGoals}
+                       value={value.userGoals}
+                       type='text'
+                       name='userGoals'
+                       placeholder='Enter user interests ...'/>
             </div>
             <button className='form__button' onClick={handleFormSubmit}>Submit</button>
         </form>
