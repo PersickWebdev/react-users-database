@@ -4,7 +4,8 @@ import { Route } from 'react-router-dom';
 import { Header } from './components';
 import { Sidebar } from './components';
 import { UsersList } from "./components";
-import { UserAddForm } from './components'
+// import { UserAddForm } from './components'
+import { UserAddFormHook } from "./components";
 
 const App = () => {
     return (
@@ -13,7 +14,8 @@ const App = () => {
             <Sidebar/>
             <div className='app__content'>
                 <Route path='/users-list' component={ UsersList } />
-                <Route path='/user-add-form' component={ UserAddForm } />
+                {/*<Route path='/user-add-form' component={ UserAddForm } />*/}
+                <Route path='/user-add-form' component={ UserAddFormHook } />
             </div>
         </div>
     );

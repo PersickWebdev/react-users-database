@@ -1,0 +1,36 @@
+.form__container {
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid $color-main;
+  border-radius: 5px;
+  color: $color-main;
+
+  .form__heading {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-main;
+  }
+
+  .form__section:not(:first-child) {
+    margin-top: 10px;
+
+    .form__input {
+      margin-top: 5px;
+      width: 290px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      padding: 5px;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .form__error {
+    padding: 5px;
+    color: #ff0000;
+  }
+
+  .form__inputError {
+    background-color: rgba(255, 144, 144, 0.5);
+  }
+}
