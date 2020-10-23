@@ -46,8 +46,8 @@ const User = ({ id, firstName, secondName, age, location, occupation,
                     {processArray(goals)}
                 </p>
                 <div className='user__more--actions'>
-                    <button className='user__button user__button--close'
-                            onClick={showMore}>&times;</button>
+                    <button className='user__button user__button--back'
+                            onClick={showMore}>&#129044;</button>
                 </div>
             </div>
             }

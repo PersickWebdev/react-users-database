@@ -23,6 +23,10 @@
       padding: 5px;
       transition: all 0.5s ease;
     }
+
+    .form__radioLabel:not(:first-child) {
+      margin: 0 10px;
+    }
   }
 
   .form__error {
@@ -32,5 +36,23 @@
 
   .form__inputError {
     background-color: rgba(255, 144, 144, 0.5);
+  }
+
+  .form__actions {
+    margin-top: 15px;
+
+    .form__button {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      transition: all 0.3s ease;
+      background-color: rgba(0, 255, 13, 0.6);
+
+      &:hover {
+        background-color: rgb(0, 255, 85);
+      }
+    }
   }
 }

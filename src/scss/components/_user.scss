@@ -136,6 +136,18 @@
       border-radius: 50%;
       background-color: $color-delete;
     }
+
+    .user__button--back {
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(255, 171, 0, 0.6);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $color-main;
+        background-color: #ffab00;
+      }
+    }
   }
 
   .user__more--actions {

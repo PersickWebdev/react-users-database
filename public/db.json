@@ -144,6 +144,28 @@
         "study as biologist",
         "a good car"
       ]
+    },
+    {
+      "id": 1603453971755,
+      "firstName": "Harry",
+      "secondName": "Harrison",
+      "age": 25,
+      "location": "New-York",
+      "maritalStatus": "single",
+      "children": "none",
+      "occupation": "Developer",
+      "interests": [
+        "Snowboarding",
+        "basketball"
+      ],
+      "qualities": [
+        "Reliable",
+        "cool"
+      ],
+      "goals": [
+        "Car",
+        "high income"
+      ]
     }
   ]
 }
