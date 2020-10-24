@@ -17,73 +17,20 @@ const UserAddForm = () => {
         userGoals: []
     });
 
-    const handler = (event) => {
+    const handleOnChange = (event) => {
         setValue({
             ...value,
             [event.target.name]: event.target.value
         });
     };
 
-    const arrayHandler = (event) => {
+    const handleOnBlur = (event) => {
         const array = event.target.value.split(',').map(item => item[0] === ' ' ? item.split('').slice(1).join('') : item);
         setValue({
             ...value,
             [event.target.name]: array
         });
     };
-
-    // The following code optimization needed (32 - 48)
-    const handleUserName = (event) => {
-        handler(event);
-    };
-
-    const handleUserSurname = (event) => {
-        handler(event);
-    };
-
-    const handleUserAge = (event) => {
-        handler(event);
-    };
-
-    const handleUserLocation = (event) => {
-        handler(event);
-    };
-
-    const handleUserOccupation = (event) => {
-        handler(event);
-    };
-
-    const handleUserMaritalStatus = (event) => {
-        handler(event);
-    };
-
-    const handleUserChildren = (event) => {
-        handler(event);
-    };
-
-    const handleUserInterests = (event) => {
-        handler(event);
-    };
-
-    const handleUserQualities = (event) => {
-        handler(event);
-    }
-
-    const handleUserGoals = (event) => {
-        handler(event);
-    }
-
-    const setUserInterests = (event) => {
-        arrayHandler(event);
-    };
-
-    const setUserQualities = (event) => {
-        arrayHandler(event);
-    }
-
-    const setUserGoals = (event) => {
-        arrayHandler(event);
-    }
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -107,7 +54,7 @@ const UserAddForm = () => {
         <form className='form'>
             <div className='form__section'>
                 <p className='form__label'>User first name:</p>
-                <input onChange={handleUserName}
+                <input onChange={handleOnChange}
                        value={value.userName}
                        type='text'
                        name='userName'
@@ -115,7 +62,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User second name:</p>
-                <input onChange={handleUserSurname}
+                <input onChange={handleOnChange}
                        value={value.userSurname}
                        type='text'
                        name='userSurname'
@@ -123,7 +70,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User age:</p>
-                <input onChange={handleUserAge}
+                <input onChange={handleOnChange}
                        value={value.userAge}
                        type='text'
                        name='userAge'
@@ -131,7 +78,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User location:</p>
-                <input onChange={handleUserLocation}
+                <input onChange={handleOnChange}
                        value={value.userLocation}
                        type='text'
                        name='userLocation'
@@ -139,7 +86,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User occupation:</p>
-                <input onChange={handleUserOccupation}
+                <input onChange={handleOnChange}
                        value={value.userOccupation}
                        type='text'
                        name='userOccupation'
@@ -147,7 +94,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User marital status:</p>
-                <input onChange={handleUserMaritalStatus}
+                <input onChange={handleOnChange}
                        value={value.userMaritalStatus}
                        type='text'
                        name='userMaritalStatus'
@@ -155,7 +102,7 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User children:</p>
-                <input onChange={handleUserChildren}
+                <input onChange={handleOnChange}
                        value={value.userChildren}
                        type='text'
                        name='userChildren'
@@ -163,8 +110,8 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User interests:</p>
-                <input onChange={handleUserInterests}
-                       onBlur={setUserInterests}
+                <input onChange={handleOnChange}
+                       onBlur={handleOnBlur}
                        value={value.userInterests}
                        type='text'
                        name='userInterests'
@@ -172,8 +119,8 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User qualities:</p>
-                <input onChange={handleUserQualities}
-                       onBlur={setUserQualities}
+                <input onChange={handleOnChange}
+                       onBlur={handleOnBlur}
                        value={value.userQualities}
                        type='text'
                        name='userQualities'
@@ -181,8 +128,8 @@ const UserAddForm = () => {
             </div>
             <div className='form__section'>
                 <p className='form__label'>User goals:</p>
-                <input onChange={handleUserGoals}
-                       onBlur={setUserGoals}
+                <input onChange={handleOnChange}
+                       onBlur={handleOnBlur}
                        value={value.userGoals}
                        type='text'
                        name='userGoals'
