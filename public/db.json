@@ -149,18 +149,20 @@
       "id": 1603476835756,
       "firstName": "Harry",
       "secondName": "Harrison",
-      "age": 1,
+      "age": 80,
       "location": "Odessa",
-      "maritalStatus": "single",
+      "maritalStatus": "Single",
       "children": "none",
       "occupation": "Dentist",
       "interests": [
         "Snowboarding",
-        "basketball"
+        "reading",
+        "hiking"
       ],
       "qualities": [
         "Reliable",
-        "cool"
+        "cool",
+        "very cool"
       ],
       "goals": [
         "Car",
