@@ -1,4 +1,4 @@
-import {DELETE_USER, SET_USERS, UPDATE_USER} from "./actionTypes";
+import {ADD_TO_FAVOURITES, DELETE_USER, SET_USERS, UPDATE_USER} from "./actionTypes";
 import axios from 'axios';
 
 export const fetchUsers = () => (dispatch) => {
@@ -55,3 +55,10 @@ export const deleteUser = (userId) => {
         payload: userId
     }
 };
+
+export const addUserToFavourites = (userId) => {
+    return {
+        type: ADD_TO_FAVOURITES,
+        payload: userId
+    }
+}

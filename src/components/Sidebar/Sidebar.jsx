@@ -10,6 +10,9 @@ const Sidebar = () => {
             <div className='sidebar__linkBox'>
                 <NavLink to='/user-add-form' activeClassName='activeLink'>Add New User</NavLink>
             </div>
+            <div className='sidebar__linkBox'>
+                <NavLink to='/favourites' activeClassName='activeLink'>Favourites</NavLink>
+            </div>
         </div>
     );
 }

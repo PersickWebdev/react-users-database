@@ -1,4 +1,4 @@
-import {DELETE_USER, SET_USERS } from "./actionTypes";
+import {ADD_TO_FAVOURITES, DELETE_USER, SET_USERS} from "./actionTypes";
 
 const initialState = {
     users: []
@@ -15,6 +15,11 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.filter(user => user.id !== action.payload)
+            }
+        case ADD_TO_FAVOURITES :
+            return {
+                ...state,
+                users: state.users.map(user => user.id === action.payload ? user.isFavourite = true : false)
             }
         default:
             return state;

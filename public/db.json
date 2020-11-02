@@ -9,6 +9,7 @@
       "maritalStatus": "Single",
       "children": "none",
       "occupation": "Dentist",
+      "isFavourite": true,
       "interests": [
         "painting",
         "watching musicals",
@@ -33,6 +34,7 @@
       "maritalStatus": "Married",
       "children": "1",
       "occupation": "Developer",
+      "isFavourite": false,
       "interests": [
         "extreme driving",
         "animals",
@@ -57,6 +59,7 @@
       "maritalStatus": "Single",
       "children": "none",
       "occupation": "Student",
+      "isFavourite": false,
       "interests": [
         "swimming",
         "metalcore",
@@ -81,6 +84,7 @@
       "maritalStatus": "Single",
       "children": "1",
       "occupation": "Doctor",
+      "isFavourite": true,
       "interests": [
         "rope jumping",
         "hiking",
@@ -105,6 +109,7 @@
       "maritalStatus": "Married",
       "children": "2",
       "occupation": "Trader",
+      "isFavourite": false,
       "interests": [
         "snowboarding",
         "video",
@@ -130,6 +135,7 @@
       "maritalStatus": "Single",
       "children": "none",
       "occupation": "School-girl",
+      "isFavourite": false,
       "interests": [
         "watching cartoons",
         "plants",
@@ -154,6 +160,7 @@
       "maritalStatus": "Single",
       "children": "none",
       "occupation": "Dentist",
+      "isFavourite": false,
       "interests": [
         "Snowboarding",
         "reading",

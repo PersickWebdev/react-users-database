@@ -4,7 +4,8 @@
 @import './components/sidebar';
 @import './components/usersList';
 @import './components/user';
-@import './components/userAddFormHook.scss';
+@import './components/userAddFormHook';
+@import './components/favourites';
 
 body {
   font-family: Roboto, sans-serif;

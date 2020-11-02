@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import PropTypes from 'prop-types';
 import {UserEditFormHook} from "../index";
+import {useDispatch} from "react-redux";
+import {addUserToFavourites, updateUserInDataBase} from "../../redux/actionCreators";
 
 const User = ({ id, firstName, secondName, age, location, occupation,
-                maritalStatus, children, interests, qualities, goals,
+                maritalStatus, children, isFavourite, interests, qualities, goals,
                 deleteHandler }) => {
 
     const [isVisible, setIsVisible] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
+    const dispatch = useDispatch();
 
     const showMore = () => {
         setIsVisible(!isVisible);
@@ -19,6 +22,25 @@ const User = ({ id, firstName, secondName, age, location, occupation,
 
     const toggleEditMode = () => {
         setIsEdit(!isEdit);
+    }
+
+    const addToFavourites = () => {
+        const updatedUser = {
+            id,
+            firstName,
+            secondName,
+            age,
+            location,
+            maritalStatus,
+            children,
+            occupation,
+            isFavourite: !isFavourite,
+            interests,
+            qualities,
+            goals
+        }
+        dispatch(updateUserInDataBase(id, updatedUser));
+        console.log(updatedUser);
     }
 
     return (
@@ -54,6 +76,10 @@ const User = ({ id, firstName, secondName, age, location, occupation,
                 <span className='user__bioLink'
                       onClick={showMore}> See more </span>
                         <div className='user__actions'>
+                            <button className={isFavourite ? 'user__button user__button--favourites user__button--favouritesActive' : 'user__button user__button--favourites'}
+                                    onClick={addToFavourites}>
+                                &#9734;
+                            </button>
                             <button className='user__button user__button--edit'
                                     onClick={toggleEditMode}>
                                 &#x270E;
