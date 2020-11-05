@@ -5,3 +5,4 @@ export { default as User } from './UsersList/User';
 export { default as UserAddFormHook } from './UserAddFormHook/UserAddFormHook';
 export { default as UserEditFormHook } from './UserEditFormHook/UserEditFormHook';
 export { default as Favourites } from './Favourites/Favourites';
+export { default as FavouriteUser } from './Favourites/FavouriteUser';

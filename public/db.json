@@ -176,6 +176,32 @@
   ],
   "favourites": [
     {
+      "id": 1604573105238,
+      "firstName": "Jimmy",
+      "secondName": "Davidson",
+      "age": 32,
+      "location": "London",
+      "maritalStatus": "married",
+      "children": "3",
+      "occupation": "Teacher",
+      "isFavourite": true,
+      "interests": [
+        "Snowboarding",
+        "reading",
+        "hiking"
+      ],
+      "qualities": [
+        "Reliable",
+        "cool",
+        "very cool"
+      ],
+      "goals": [
+        "Car",
+        "high income",
+        "family"
+      ]
+    },
+    {
       "id": 1604570481772,
       "firstName": "May",
       "secondName": "Anderson",

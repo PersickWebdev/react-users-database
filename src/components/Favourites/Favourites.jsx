@@ -1,17 +1,23 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchFavourites} from "../../redux/actionCreators";
+import {deleteUserFromFavourites, fetchFavourites} from "../../redux/actionCreators";
+import { FavouriteUser } from '../../components';
 
 const Favourites = () => {
     const dispatch = useDispatch();
     const favourites = useSelector((state) => state.users.favourites);
 
     useEffect(() => {
-        console.log(favourites)
         dispatch(fetchFavourites());
     }, []);
 
-    const favouriteUsers = favourites.map(user => <div className='favouriteUser' key={user.id}>{user.firstName} {user.secondName}</div>)
+    const deleteFromFavouritesHandler = (userId) => {
+        dispatch(deleteUserFromFavourites(userId))
+    }
+
+    const favouriteUsers = favourites.map(user => <FavouriteUser key={user.id}
+                                                                 {...user}
+                                                                 deleteFromFavouritesHandler={deleteFromFavouritesHandler}/>)
 
     return(
         <div>
