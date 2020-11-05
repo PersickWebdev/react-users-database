@@ -5,7 +5,13 @@ $color-main: rgb(255, 255, 255);
 $color-active: rgb(157, 0, 255);
 
 $color-favourite: rgba(0, 247, 255, 0.6);
-$color-favourite-active: rgba(255, 191, 0, 0.6);
+$color-favourite-hover: rgb(0, 247, 255);
+
+$color-edit: rgba(0, 255, 82, 0.6);
+$color-edit-hover: rgb(0, 255, 82);
+
+$color-back: rgba(255, 171, 0, 0.6);
+$color-back-hover: rgb(255, 171, 0);
 
 $color-delete: rgba(255, 0, 0, 0.50);
-$color-delete-active: rgba(255, 0, 0, 0.70);
+$color-delete-hover: rgb(255, 0, 0);

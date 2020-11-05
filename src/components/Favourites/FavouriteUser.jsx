@@ -8,7 +8,7 @@ const FavouriteUser = ({ id, firstName, secondName, isFavourite, age, deleteFrom
                 <span>{secondName} </span>
                 <span>({age}) </span>
             </div>
-            <button className={isFavourite ? 'favouriteUser__button favouriteUser__button--active' : 'favouriteUser__button'}
+            <button className={isFavourite ? 'button button--favourites' : 'button button--favourites'}
                     onClick={() => deleteFromFavouritesHandler(id)}
             >
                 &#9734;

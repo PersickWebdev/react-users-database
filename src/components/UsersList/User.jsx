@@ -76,15 +76,15 @@ const User = ({ id, firstName, secondName, age, location, occupation,
                 <span className='user__bioLink'
                       onClick={showMore}> See more </span>
                         <div className='user__actions'>
-                            <button className={isFavourite ? 'user__button user__button--favourites user__button--favouritesActive' : 'user__button user__button--favourites'}
+                            <button className={isFavourite ? 'button button--favourites' : 'button button--favourites'}
                                     onClick={addToFavourites}>
                                 &#9734;
                             </button>
-                            <button className='user__button user__button--edit'
+                            <button className='button button--edit'
                                     onClick={toggleEditMode}>
                                 &#x270E;
                             </button>
-                            <button className='user__button user__button--delete'
+                            <button className='button button--delete'
                                     onClick={() => deleteHandler(id)}>
                                 &times;
                             </button>
@@ -102,7 +102,7 @@ const User = ({ id, firstName, secondName, age, location, occupation,
                             {processArray(goals)}
                         </p>
                         <div className='user__more--actions'>
-                            <button className='user__button user__button--back'
+                            <button className='button button--back'
                                     onClick={showMore}>
                                 &#129044;
                             </button>

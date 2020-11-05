@@ -176,54 +176,28 @@
   ],
   "favourites": [
     {
-      "id": 1604573105238,
-      "firstName": "Jimmy",
-      "secondName": "Davidson",
-      "age": 32,
-      "location": "London",
-      "maritalStatus": "married",
-      "children": "3",
-      "occupation": "Teacher",
-      "isFavourite": true,
-      "interests": [
-        "Snowboarding",
-        "reading",
-        "hiking"
-      ],
-      "qualities": [
-        "Reliable",
-        "cool",
-        "very cool"
-      ],
-      "goals": [
-        "Car",
-        "high income",
-        "family"
-      ]
-    },
-    {
-      "id": 1604570481772,
-      "firstName": "May",
+      "id": 1,
+      "firstName": "Markus",
       "secondName": "Anderson",
-      "age": 28,
-      "location": "Norway",
-      "maritalStatus": "single",
+      "age": 30,
+      "location": "England",
+      "maritalStatus": "Single",
       "children": "none",
-      "occupation": "Police",
+      "occupation": "Dentist",
       "isFavourite": true,
       "interests": [
-        "Snowboarding",
-        "basketball"
+        "painting",
+        "watching musicals",
+        "skating"
       ],
       "qualities": [
-        "Reliable",
-        "cool",
-        "very cool"
+        "responsibility",
+        "hardworking",
+        "self-development"
       ],
       "goals": [
-        "Car",
-        "high income",
-        "family"
+        "personal growth",
+        "high income"
       ]
     }
   ]

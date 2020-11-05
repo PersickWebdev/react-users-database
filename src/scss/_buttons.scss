@@ -1,0 +1,47 @@
+.button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: $color-main;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-main;
+  }
+}
+
+.button--edit {
+  background-color: $color-edit;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: $color-edit-hover;
+  }
+}
+
+.button--favourites {
+  background-color: $color-favourite;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: $color-favourite-hover;
+  }
+}
+
+.button--back {
+  background-color: $color-back;
+
+  &:hover {
+    background-color: $color-back-hover;
+  }
+}
+
+.button--delete {
+  background-color: $color-delete;
+
+  &:hover {
+    background-color: $color-delete-hover;
+  }
+}

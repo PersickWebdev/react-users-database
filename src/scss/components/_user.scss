@@ -1,3 +1,5 @@
+@import '../buttons';
+
 .user__container {
   max-width: 300px;
   width: 100%;
@@ -86,51 +88,6 @@
       justify-content: flex-end;
       align-items: center;
       text-align: right;
-
-      .user__button {
-        width: 25px;
-        height: 25px;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-        background-color: $color-main;
-        transition: all 0.3s ease;
-
-        &:hover {
-          color: $color-main;
-          background-color: $color-main;
-        }
-      }
-
-      .user__button--delete {
-        background-color: $color-delete;
-
-        &:hover {
-          background-color: $color-delete-active;
-        }
-      }
-
-      .user__button--edit {
-        background-color: rgba(0, 255, 82, 0.6);
-        margin-right: 10px;
-
-        &:hover {
-          background-color: rgb(0, 255, 82);
-        }
-      }
-
-      .user__button--favourites {
-        background-color: rgba(0, 247, 255, 0.6);
-        margin-right: 10px;
-
-        &:hover {
-          background-color: rgb(0, 247, 255);
-        }
-      }
-
-      .user__button--favouritesActive {
-        background-color: rgba(255, 221, 0, 0.6);
-      }
     }
   }
 
@@ -157,25 +114,6 @@
     .user__more--field span {
       color: $color-main;
       font-weight: 600;
-    }
-
-    .user__button--close {
-      border: none;
-      border-radius: 50%;
-      background-color: $color-delete;
-    }
-
-    .user__button--back {
-      width: 25px;
-      height: 25px;
-      border: none;
-      border-radius: 50%;
-      background-color: rgba(255, 171, 0, 0.6);
-
-      &:hover {
-        color: $color-main;
-        background-color: #ffab00;
-      }
     }
   }
 
