@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import {useDispatch} from "react-redux";
-import {updateUserInDataBase} from "../../redux/actionCreators";
+import { useDispatch } from "react-redux";
+import { updateUserInDatabase } from "../../redux/actionCreators";
 
 const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation,
-                            maritalStatus, children, interests, qualities, goals, toggleEditMode }) => {
+                            maritalStatus, children, interests, isFavourite, qualities, goals, toggleEditMode }) => {
     const dispatch = useDispatch();
     const { register, handleSubmit, errors } = useForm();
     const [values, setValues] = useState({
@@ -16,6 +17,7 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
         occupation,
         maritalStatus,
         children,
+        isFavourite,
         interests,
         qualities,
         goals
@@ -31,11 +33,12 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
             maritalStatus: data.maritalStatus,
             children: data.children,
             occupation: data.occupation,
+            isFavourite: data.isFavourite,
             interests: processStringForNewObject(data.interests),
             qualities: processStringForNewObject(data.qualities),
             goals: processStringForNewObject(data.goals),
         }
-        dispatch(updateUserInDataBase(id, updatedUser));
+        dispatch(updateUserInDatabase(id, updatedUser));
     }
 
     const handleOnChange = (event) => {

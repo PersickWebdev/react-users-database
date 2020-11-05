@@ -9,7 +9,7 @@
       "maritalStatus": "Single",
       "children": "none",
       "occupation": "Dentist",
-      "isFavourite": true,
+      "isFavourite": false,
       "interests": [
         "painting",
         "watching musicals",
@@ -84,7 +84,7 @@
       "maritalStatus": "Single",
       "children": "1",
       "occupation": "Doctor",
-      "isFavourite": true,
+      "isFavourite": false,
       "interests": [
         "rope jumping",
         "hiking",
@@ -101,65 +101,61 @@
       ]
     },
     {
-      "id": 5,
-      "firstName": "Phil",
-      "secondName": "Murray",
-      "age": 28,
-      "location": "Bronx",
-      "maritalStatus": "Married",
-      "children": "2",
-      "occupation": "Trader",
-      "isFavourite": false,
-      "interests": [
-        "snowboarding",
-        "video",
-        "scripts"
-      ],
-      "qualities": [
-        "responsibility",
-        "hardworking",
-        "self-development"
-      ],
-      "goals": [
-        "open market",
-        "high income",
-        "happy family"
-      ]
-    },
-    {
-      "id": 6,
-      "firstName": "Marry",
-      "secondName": "Davidson",
-      "age": 16,
-      "location": "Miami",
-      "maritalStatus": "Single",
-      "children": "none",
-      "occupation": "School-girl",
-      "isFavourite": false,
-      "interests": [
-        "watching cartoons",
-        "plants",
-        "physics"
-      ],
-      "qualities": [
-        "responsibility",
-        "hardworking",
-        "self-development"
-      ],
-      "goals": [
-        "study as biologist",
-        "a good car"
-      ]
-    },
-    {
-      "id": 1603476835756,
+      "id": 1604569108890,
       "firstName": "Harry",
       "secondName": "Harrison",
-      "age": 80,
-      "location": "Odessa",
-      "maritalStatus": "Single",
+      "age": 42,
+      "location": "USA",
+      "maritalStatus": "Married",
+      "children": "5",
+      "occupation": "Teacher",
+      "interests": [
+        "Snowboarding",
+        "basketball"
+      ],
+      "qualities": [
+        "Reliable",
+        "cool"
+      ],
+      "goals": [
+        "Car",
+        "high income"
+      ]
+    },
+    {
+      "id": 1604570481772,
+      "firstName": "May",
+      "secondName": "Anderson",
+      "age": 28,
+      "location": "Norway",
+      "maritalStatus": "single",
       "children": "none",
-      "occupation": "Dentist",
+      "occupation": "Police",
+      "isFavourite": false,
+      "interests": [
+        "Snowboarding",
+        "basketball"
+      ],
+      "qualities": [
+        "Reliable",
+        "cool",
+        "very cool"
+      ],
+      "goals": [
+        "Car",
+        "high income",
+        "family"
+      ]
+    },
+    {
+      "id": 1604573105238,
+      "firstName": "Jimmy",
+      "secondName": "Davidson",
+      "age": 32,
+      "location": "London",
+      "maritalStatus": "married",
+      "children": "3",
+      "occupation": "Teacher",
       "isFavourite": false,
       "interests": [
         "Snowboarding",
@@ -173,7 +169,35 @@
       ],
       "goals": [
         "Car",
-        "high income"
+        "high income",
+        "family"
+      ]
+    }
+  ],
+  "favourites": [
+    {
+      "id": 1604570481772,
+      "firstName": "May",
+      "secondName": "Anderson",
+      "age": 28,
+      "location": "Norway",
+      "maritalStatus": "single",
+      "children": "none",
+      "occupation": "Police",
+      "isFavourite": true,
+      "interests": [
+        "Snowboarding",
+        "basketball"
+      ],
+      "qualities": [
+        "Reliable",
+        "cool",
+        "very cool"
+      ],
+      "goals": [
+        "Car",
+        "high income",
+        "family"
       ]
     }
   ]

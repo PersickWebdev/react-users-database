@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from "react-redux";
 import { postNewUser } from "../../redux/actionCreators";
 
-// Form validation is simplified to speed up the dev process. Needs to be fully implemented!
+// Form validation is simplified.
 const UserAddFormHook = () => {
     const dispatch = useDispatch();
     const { register, handleSubmit, errors } = useForm();
@@ -22,6 +22,7 @@ const UserAddFormHook = () => {
             maritalStatus: data.maritalStatus,
             children: data.children,
             occupation: data.occupation,
+            isFavourite: false,
             interests: processString(data.interests),
             qualities: processString(data.qualities),
             goals: processString(data.goals),

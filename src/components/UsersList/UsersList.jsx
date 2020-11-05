@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { deleteUserFromDataBase, fetchUsers} from "../../redux/actionCreators";
+import React, { useEffect, useMemo } from "react";
+import {deleteUserFromDatabase, deleteUserFromDataBase, fetchUsers} from "../../redux/actionCreators";
 import { useDispatch, useSelector } from "react-redux";
 
 import { User } from "../index";
@@ -10,16 +10,17 @@ const UsersList = () => {
 
     useEffect(() => {
         dispatch(fetchUsers());
-    }, []);
+    }, [dispatch]);
 
     const deleteHandler = (id) => {
         if (window.confirm('Are you sure you want to delete this User?'))
-        dispatch(deleteUserFromDataBase(id))
+        dispatch(deleteUserFromDatabase(id))
     }
 
-    const usersElements = users.map(user => <User key={user.id}
+    console.log(users)
+    const usersElements = useMemo(() => users.map(user => <User key={user.id}
                                                   {...user}
-                                                  deleteHandler={deleteHandler}/>);
+                                                  deleteHandler={deleteHandler}/>), [users, deleteHandler]);
 
     return (
         <div className='usersList__container'>

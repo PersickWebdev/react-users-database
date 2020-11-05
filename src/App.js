@@ -8,6 +8,7 @@ import { UserAddFormHook } from "./components";
 import { Favourites } from './components';
 
 const App = () => {
+    console.log('Hello')
     return (
         <div className='app__container'>
             <Header/>

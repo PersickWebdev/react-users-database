@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from "react-redux";
 import PropTypes from 'prop-types';
-import {UserEditFormHook} from "../index";
-import {useDispatch} from "react-redux";
-import {addUserToFavourites, updateUserInDataBase} from "../../redux/actionCreators";
+import { UserEditFormHook } from "../index";
+import {addUserToFavourites } from "../../redux/actionCreators";
 
 const User = ({ id, firstName, secondName, age, location, occupation,
                 maritalStatus, children, isFavourite, interests, qualities, goals,
@@ -25,7 +26,7 @@ const User = ({ id, firstName, secondName, age, location, occupation,
     }
 
     const addToFavourites = () => {
-        const updatedUser = {
+        const newUser = {
             id,
             firstName,
             secondName,
@@ -39,8 +40,7 @@ const User = ({ id, firstName, secondName, age, location, occupation,
             qualities,
             goals
         }
-        dispatch(updateUserInDataBase(id, updatedUser));
-        console.log(updatedUser);
+        dispatch(addUserToFavourites(newUser));
     }
 
     return (
