@@ -5,10 +5,12 @@ import { ADD_USER_TO_FAVOURITES } from './actionTypes';
 import { UPDATE_USER } from './actionTypes';
 import { DELETE_USER } from './actionTypes';
 import { DELETE_USER_FROM_FAVOURITES } from './actionTypes';
+import { CHANGE_THEME } from './actionTypes';
 
 const initialState = {
     users: [],
-    favourites: []
+    favourites: [],
+    theme: 'Dark Theme'
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -48,6 +50,11 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 favourites: state.favourites.filter(user => user.id !== action.payload)
+            }
+        case CHANGE_THEME :
+            return {
+                ...state,
+                theme: action.payload
             }
         default:
             return state;

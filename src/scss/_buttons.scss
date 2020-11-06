@@ -1,3 +1,4 @@
+// General
 .button {
   width: 25px;
   height: 25px;
@@ -12,6 +13,7 @@
   }
 }
 
+// Button types
 .button--edit {
   background-color: $color-edit;
   margin-right: 10px;
@@ -43,5 +45,19 @@
 
   &:hover {
     background-color: $color-delete-hover;
+  }
+}
+
+// Theme switcher
+.button--theme {
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: $color-back;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-back-hover;
   }
 }

@@ -1,0 +1,171 @@
+// Light theme
+.theme--light--background {
+  background-color: $color-background-light;
+}
+
+.theme--light--text {
+  color: $color-black;
+}
+
+.theme--light--link {
+  color: $color-black;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.theme--light--active {
+  color: $color-link-active;
+}
+
+.theme--light--userContainer {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 2% 2% 0;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid $color-black;
+  border-top: 5px solid $color-black;
+  border-radius: 5px;
+  background-color: rgba(114, 114, 114, 0.5);
+  box-shadow: 2px 2px 10px $color-black;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover .user__name {
+    color: $color-link-active;
+    transform: translateX(15%);
+  }
+
+  &:hover .user__age span {
+    color: $color-link-active;
+  }
+
+  &:hover .user__info span {
+    color: $color-link-active;
+    transform: translateX(-20px);
+  }
+
+  .user__bioLink {
+    cursor: pointer;
+    color: $color-link-active;
+  }
+
+  .user__more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(114, 114, 114);
+    box-shadow: 2px 2px 10px $color-black;
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    & p:not(:first-child) {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid $color-black;
+    }
+
+    .user__more--field span {
+      color: $color-link-active;
+      font-weight: 600;
+    }
+  }
+}
+
+//Dark theme
+.theme--dark--background {
+  background-color: $color-background-dark;
+}
+
+.theme--dark--text {
+  color: $color-main;
+}
+
+.theme--dark--link {
+  color: $color-main;
+
+  &:hover {
+    color: $color-back-hover;
+  }
+}
+
+.theme--dark--active {
+  color: $color-back;
+}
+
+.theme--dark--userContainer {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 2% 2% 0;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid $color-black;
+  border-top: 5px solid $color-main;
+  border-radius: 5px;
+  background-color: rgba(114, 114, 114, 0.5);
+  box-shadow: 2px 2px 10px $color-black;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover .user__name {
+    color: $color-main;
+    transform: translateX(15%);
+  }
+
+  &:hover .user__age span {
+    color: $color-main;
+  }
+
+  &:hover .user__info span {
+    color: $color-main;
+    transform: translateX(-20px);
+  }
+
+  .user__bioLink {
+    cursor: pointer;
+    color: $color-main;
+  }
+
+  .user__more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(114, 114, 114);
+    box-shadow: 2px 2px 10px $color-black;
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    & p:not(:first-child) {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid $color-black;
+    }
+
+    .user__more--field span {
+      color: $color-main;
+      font-weight: 600;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { ADD_USER_TO_FAVOURITES } from './actionTypes';
 import { UPDATE_USER } from './actionTypes';
 import { DELETE_USER } from './actionTypes';
 import { DELETE_USER_FROM_FAVOURITES } from './actionTypes';
+import { CHANGE_THEME } from './actionTypes';
 
 export const fetchUsers = () => async (dispatch) => {
     const response = await axios.get('http://localhost:3001/users')
@@ -94,5 +95,13 @@ export const deleteUserFromFavs = (userId) => {
     return {
         type: DELETE_USER_FROM_FAVOURITES,
         payload: userId
+    };
+};
+
+export const changeTheme = (value) => {
+    console.log(value)
+    return {
+        type: CHANGE_THEME,
+        payload: value
     };
 };

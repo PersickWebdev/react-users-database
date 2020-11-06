@@ -1,13 +1,22 @@
-.header__container {
+@import '../themes';
+
+.header {
   grid-area: h;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #000000;
 
-  h1 {
+  .pathName {
     font-size: 20px;
     font-weight: 600;
-    color: $color-main;
+    text-align: center;
+    //color: $color-main;
+    flex: 6;
+    transition: all 1s ease;
+  }
+
+  .themeBox {
+    flex: 1;
   }
 }

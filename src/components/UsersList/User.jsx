@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useDispatch } from "react-redux";
+import {useDispatch, useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import { UserEditFormHook } from "../index";
 import {addUserToFavourites } from "../../redux/actionCreators";
@@ -9,6 +9,7 @@ const User = ({ id, firstName, secondName, age, location, occupation,
                 maritalStatus, children, isFavourite, interests, qualities, goals,
                 deleteHandler }) => {
 
+    const theme = useSelector((state) => state.users.theme);
     const [isVisible, setIsVisible] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
     const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const User = ({ id, firstName, secondName, age, location, occupation,
     }
 
     return (
-        <div className='container'>
+        <div className={theme === 'Light Theme' ? 'container theme--light--userContainer' : 'container theme--dark--userContainer'}>
             {isEdit
                 ?
                 <UserEditFormHook id={id}

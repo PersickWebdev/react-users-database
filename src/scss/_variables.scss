@@ -1,9 +1,15 @@
-$color-grey: #2d2d2d;
+// Background
+$color-background-dark: #2d2d2d;
+$color-background-light: #сссссс;
+
 $color-black: #000000;
-
 $color-main: rgb(255, 255, 255);
-$color-active: rgb(157, 0, 255);
 
+// Links
+$color-link-hover: rgb(158, 0, 255);
+$color-link-active: rgb(143, 0, 229);
+
+// Buttons
 $color-favourite: rgba(0, 247, 255, 0.6);
 $color-favourite-hover: rgb(0, 247, 255);
 

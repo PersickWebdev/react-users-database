@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { Header} from './components';
 import { Sidebar } from './components';
@@ -8,9 +9,10 @@ import { UserAddFormHook } from "./components";
 import { Favourites } from './components';
 
 const App = () => {
-    console.log('Hello')
+    const theme = useSelector((state) => state.users.theme);
+
     return (
-        <div className='app__container'>
+        <div className={theme === 'Light Theme' ? 'app__container theme--light--background' : 'app__container theme--dark--background'}>
             <Header/>
             <Sidebar/>
             <div className='app__content'>
