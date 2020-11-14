@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import classNames from 'classnames';
 import { useDispatch, useSelector} from 'react-redux';
 import { changeTheme } from "../../redux/actionCreators";
 
@@ -26,7 +27,11 @@ const WithRouterHeader = (props) => {
 
     return (
         <header className='header'>
-            <h1 className={theme === 'Light Theme' ? 'pathName theme--light--text' : 'pathName theme--dark--text'}>{path}</h1>
+            {/*<h1 className={theme === 'Light Theme' ? 'pathName theme--light--text' : 'pathName theme--dark--text'}>{path}</h1>*/}
+            <h1 className={classNames('pathName', {
+                'theme--dark--text': theme === 'Dark Theme',
+                'theme--light--text': theme === 'Light Theme',
+            })}>{path}</h1>
             <div className='themeBox'>
                 <button className='button--theme' onClick={() => toggleTheme(theme)}>{theme}</button>
             </div>

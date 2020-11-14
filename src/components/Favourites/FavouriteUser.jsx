@@ -1,8 +1,15 @@
 import React from 'react';
+import classNames from 'classnames';
+import {useSelector} from "react-redux";
 
 const FavouriteUser = ({ id, firstName, secondName, isFavourite, age, deleteFromFavouritesHandler }) => {
+    const theme = useSelector((state) => state.users.theme);
+
     return (
-        <div className='favouriteUser'>
+        <div className={classNames('favouriteUser', {
+            'theme--dark--text': theme === 'Dark Theme',
+            'theme--light--text': theme === 'Light Theme'
+        })}>
             <div className='nameBox'>
                 <span>{firstName} </span>
                 <span>{secondName} </span>

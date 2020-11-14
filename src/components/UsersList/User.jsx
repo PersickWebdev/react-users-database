@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import PropTypes from 'prop-types';
 import { UserEditFormHook } from "../index";
 import {addUserToFavourites } from "../../redux/actionCreators";
 
@@ -45,7 +46,11 @@ const User = ({ id, firstName, secondName, age, location, occupation,
     }
 
     return (
-        <div className={theme === 'Light Theme' ? 'container theme--light--userContainer' : 'container theme--dark--userContainer'}>
+        // <div className={theme === 'Light Theme' ? 'container theme--light--userContainer' : 'container theme--dark--userContainer'}>
+        <div className={classNames('container', {
+            'theme--dark--userContainer': theme === 'Dark Theme',
+            'theme--light--userContainer': theme === 'Light Theme'
+        })}>
             {isEdit
                 ?
                 <UserEditFormHook id={id}

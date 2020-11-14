@@ -1,11 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import { updateUserInDatabase } from "../../redux/actionCreators";
 
 const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation,
                             maritalStatus, children, interests, isFavourite, qualities, goals, toggleEditMode }) => {
+    const theme = useSelector((state) => state.users.theme);
     const dispatch = useDispatch();
     const { register, handleSubmit, errors } = useForm();
     const [values, setValues] = useState({
@@ -71,11 +73,15 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
     }
 
     return (
-        <form className='form__container' onSubmit={handleSubmit(handleOnSubmit)}>
+        // <form className='form__container' onSubmit={handleSubmit(handleOnSubmit)}>
+        <form className={classNames('editForm__container', {
+            'form__container--dark': theme === 'Dark Theme',
+            'form__container--light': theme === 'Light Theme'
+        })} onSubmit={handleSubmit(handleOnSubmit)}>
             <div className='form__section'>
                 <label>
                     <p>First name:</p>
-                    <input className={errors.firstName ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.firstName ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='firstName'
                            value={values.firstName}
@@ -91,13 +97,13 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                }
                            })}
                     />
-                    {errors.firstName && <p className='form__error'>{errors.firstName.message}</p>}
+                    {errors.firstName && <p className='editForm__error'>{errors.firstName.message}</p>}
                 </label>
             </div>
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Second name:</p>
-                    <input className={errors.firstName ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.firstName ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='secondName'
                            onChange={handleOnChange}
@@ -113,13 +119,13 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                }
                            })}
                     />
-                    {errors.secondName && <p className='form__error'>{errors.secondName.message}</p>}
+                    {errors.secondName && <p className='editForm__error'>{errors.secondName.message}</p>}
                 </label>
             </div>
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Age:</p>
-                    <select className='form__input'
+                    <select className='editForm__input'
                             name='age'
                             value={values.age}
                             onChange={handleOnChange}
@@ -128,10 +134,10 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                     </select>
                 </label>
             </div>
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Location:</p>
-                    <input className={errors.location ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.location ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='location'
                            value={values.location}
@@ -147,11 +153,11 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                }
                            })}
                     />
-                    {errors.location && <p className='form__error'>{errors.location.message}</p>}
+                    {errors.location && <p className='editForm__error'>{errors.location.message}</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Marital Status:</p>
                     <input type='radio'
@@ -164,7 +170,7 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                required: true
                            })}
                     />
-                    <label className='form__radioLabel' htmlFor='maritalStatus01'>Single</label>
+                    <label className='editForm__radioLabel' htmlFor='maritalStatus01'>Single</label>
 
                     <input type='radio'
                            name='maritalStatus'
@@ -176,15 +182,15 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                required: true,
                            })}
                     />
-                    <label className='form__radioLabel' htmlFor='maritalStatus02'>Married</label>
+                    <label className='editForm__radioLabel' htmlFor='maritalStatus02'>Married</label>
                     {errors.maritalStatus && <p className='form__error'>This field is required</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Children:</p>
-                    <input className={errors.children ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.children ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='children'
                            value={values.children}
@@ -196,14 +202,14 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                }
                            })}
                     />
-                    {errors.children && <p className='form__error'>{errors.children.message}</p>}
+                    {errors.children && <p className='editForm__error'>{errors.children.message}</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Occupation:</p>
-                    <input className={errors.occupation ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.occupation ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='occupation'
                            value={values.occupation}
@@ -215,14 +221,14 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                }
                            })}
                     />
-                    {errors.occupation && <p className='form__error'>{errors.occupation.message}</p>}
+                    {errors.occupation && <p className='editForm__error'>{errors.occupation.message}</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Interests:</p>
-                    <input className={errors.interests ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.interests ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='interests'
                            value={values.interests}
@@ -232,14 +238,14 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                required: true,
                            })}
                     />
-                    {errors.interests && <p className='form__error'>Enter at least two interests</p>}
+                    {errors.interests && <p className='editForm__error'>Enter at least two interests</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Qualities:</p>
-                    <input className={errors.qualities ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.qualities ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='qualities'
                            value={values.qualities}
@@ -249,14 +255,14 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                required: true,
                            })}
                     />
-                    {errors.interests && <p className='form__error'>Enter at least two qualities</p>}
+                    {errors.interests && <p className='editForm__error'>Enter at least two qualities</p>}
                 </label>
             </div>
 
-            <div className='form__section'>
+            <div className='editForm__section'>
                 <label>
                     <p>Goals:</p>
-                    <input className={errors.goals ? `form__input form__inputError` : 'form__input'}
+                    <input className={errors.goals ? `editForm__input editForm__inputError` : 'editForm__input'}
                            type="text"
                            name='goals'
                            value={values.goals}
@@ -266,12 +272,12 @@ const UserEditFormHook = ({ id, firstName, secondName, age, location, occupation
                                required: true,
                            })}
                     />
-                    {errors.interests && <p className='form__error'>Enter at least one goal</p>}
+                    {errors.interests && <p className='editForm__error'>Enter at least one goal</p>}
                 </label>
             </div>
-            <div className='form__actions'>
+            <div className='editForm__actions'>
                 <button onClick={toggleEditMode}>&#129044;</button>
-                <button className='form__button'>Submit</button>
+                <button className='editForm__button'>Submit</button>
             </div>
         </form>
     );

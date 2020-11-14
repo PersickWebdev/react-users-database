@@ -1,10 +1,12 @@
 import React from 'react';
+import classNames from 'classnames';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { postNewUser } from "../../redux/actionCreators";
 
 // Form validation is simplified.
 const UserAddFormHook = () => {
+    const theme = useSelector((state) => state.users.theme);
     const dispatch = useDispatch();
     const { register, handleSubmit, errors } = useForm();
 
@@ -36,7 +38,11 @@ const UserAddFormHook = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(handleOnSubmit)} className='form__container'>
+        // <form onSubmit={handleSubmit(handleOnSubmit)} className='form__container'>
+        <form onSubmit={handleSubmit(handleOnSubmit)} className={classNames('form__container', {
+            'form__container--dark': theme === 'Dark Theme',
+            'form__container--light': theme === 'Light Theme'
+        })}>
             <h3 className='form__heading'>Adding New User Form</h3>
             <div className='form__section'>
                 <label>

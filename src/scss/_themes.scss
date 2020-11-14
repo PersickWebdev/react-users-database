@@ -3,6 +3,10 @@
   background-color: $color-background-light;
 }
 
+.theme--light--border {
+  border: 1px solid $color-black;
+}
+
 .theme--light--text {
   color: $color-black;
 }
@@ -84,9 +88,28 @@
   }
 }
 
+.form__container--light {
+  border: 1px solid $color-black;
+  color: $color-black;
+
+  .form__heading {
+    border-bottom: 1px solid $color-black;
+  }
+
+  .form__section:not(:first-child) {
+    .form__input {
+      background-color: #cccccc;
+    }
+  }
+}
+
 //Dark theme
 .theme--dark--background {
   background-color: $color-background-dark;
+}
+
+.theme--dark--border {
+  border: 1px solid $color-main;
 }
 
 .theme--dark--text {
@@ -166,6 +189,33 @@
     .user__more--field span {
       color: $color-main;
       font-weight: 600;
+    }
+  }
+}
+
+.form__container--dark {
+  border: 1px solid $color-main;
+  color: $color-main;
+
+  .form__heading {
+    border-bottom: 1px solid $color-main;
+  }
+
+  .form__section:not(:first-child) {
+    margin-top: 10px;
+
+    .form__input {
+      margin-top: 5px;
+      width: 290px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      padding: 5px;
+      transition: all 0.5s ease;
+    }
+
+    .form__radioLabel:not(:first-child) {
+      margin: 0 10px;
     }
   }
 }
